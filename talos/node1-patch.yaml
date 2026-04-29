@@ -1,0 +1,17 @@
+
+machine:
+  type: init
+  hostname: node1
+  install:
+    disk: /dev/sda
+  network:
+    interfaces:
+      - interface: eno1
+        dhcp: true
+    extraHostEntries:
+      - ip: 127.0.0.1
+        aliases:
+          - node1
+      - ip: 127.0.0.1
+        aliases:
+          - kube.jero-mu.talos.local
